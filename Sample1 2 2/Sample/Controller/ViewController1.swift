@@ -46,9 +46,9 @@ class ViewController1: UIViewController {
         // fetchImage()
         
          //useWorkItem()
-        //testDispatchGroup()
+         testDispatchGroup()
        // testSemaphoreDepedanci()
-        do2TasksAtATime()
+       // do2TasksAtATime()
     }
     
     func customQueues(){
@@ -283,13 +283,13 @@ class ViewController1: UIViewController {
 
        queueB.async(group: group) {
            print("QueueB gonna sleep")
-           sleep(3)
+           sleep(10)
            print("QueueB woke up")
        }
 
        queueC.async(group: group) {
            print("QueueC gonna sleep")
-           sleep(30)
+           sleep(3)
            print("QueueC wake up")
        }
 
@@ -298,6 +298,7 @@ class ViewController1: UIViewController {
            sleep(3)
            print("notify QueueA woke up")
        }
+    
    }
     
     func do2TasksAtATime () {
@@ -341,3 +342,62 @@ struct Operation{
         
     }
 }
+class BlockOperationViewController: UIViewController {
+    
+    @IBOutlet weak var imageView1: UIImageView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var imageView4: UIImageView!
+    @IBOutlet weak var sliderValueLabel: UILabel!
+    
+    var queue: OperationQueue?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @IBAction func didClickOnStart(sender: Any) {
+        queue = OperationQueue()
+        
+        let operation1 = BlockOperation(block: {
+           print(" operation1 staeted ")
+        })
+        
+        operation1.completionBlock = {
+            print("Operation 1 completed, cancelled:\(operation1.isCancelled)")
+        }
+        queue?.addOperation(operation1)
+        
+        let operation2 = BlockOperation(block: {
+            print(" operation2 staeted ")
+        })
+        operation2.addDependency(operation1)
+        operation2.completionBlock = {
+            print("Operation 2 completed, cancelled:\(operation2.isCancelled)")
+        }
+        queue?.addOperation(operation2)
+        
+        let operation3 = BlockOperation(block: {
+            print(" operatio3 staeted ")
+        })
+        operation3.addDependency(operation2)
+        operation3.completionBlock = {
+            print("Operation 3 completed, cancelled:\(operation3.isCancelled)")
+        }
+        queue?.addOperation(operation3)
+        
+        let operation4 = BlockOperation(block: {
+            print(" operation4  staeted ")
+        })
+        operation4.completionBlock = {
+            print("Operation 4 completed, cancelled:\(operation4.isCancelled)")
+        }
+        queue?.addOperation(operation4)
+        
+    }
+    
+    
+    
+}
+
