@@ -46,9 +46,10 @@ class ViewController1: UIViewController {
         // fetchImage()
         
          //useWorkItem()
-         testDispatchGroup()
+         //testDispatchGroup()
        // testSemaphoreDepedanci()
        // do2TasksAtATime()
+         test()
     }
     
     func customQueues(){
@@ -317,7 +318,35 @@ class ViewController1: UIViewController {
            }
         }
     }
+    func  test(){
+        
+        var test = Test.test1
+        print("\n   ---- test \(test),\(test.rawValue)")//
+        
+        let associatedValu = associatedValueTest.test2(subcribe2:300)
+        
+        switch associatedValu {
+        case .test1(let aa ) where aa > 100:
+            print("Geteragt 100 ")
+        case .test2(let aa ) where aa > 200:
+         print("Geteragt 200 ")
+        case .test3,.test1,.test2 : print("Last ")
+            
+        }
+       // print("\n   ---- associatedValueTest \(test),\(test.rawValue)")
+    }
     
+
+    
+    enum  Test : String {
+        case test1 = "dec 1"
+        case test2 = "dec 2"
+    }
+    enum associatedValueTest {
+        case test1(subcribe1 :Int)
+        case test2(subcribe2 :Int)
+        case test3
+    }
 }
 
 
@@ -396,7 +425,6 @@ class BlockOperationViewController: UIViewController {
         queue?.addOperation(operation4)
         
     }
-    
     
     
 }
