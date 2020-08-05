@@ -68,12 +68,7 @@ class ViewController: UIViewController,UISearchResultsUpdating {
      */
     
     func getData(search:String) {
-        let appdelegate = UIApplication.shared.delegate as! AppDelegate
-          let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-          var homeViewController = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-          let nav = UINavigationController(rootViewController: homeViewController)
-          appdelegate.window!.rootViewController = nav
-        /*
+    
         if Connectivity.isConnectedToInternet() {
             
             self.viewModel.getList(searchString:search,pagination: self.pagination) {
@@ -92,7 +87,7 @@ class ViewController: UIViewController,UISearchResultsUpdating {
             
         }
         
-        */
+        
     }
 }
 
