@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C3F900224BD7D4D008758F0 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F900124BD7D4D008758F0 /* SlideMenuController.swift */; };
 		1C89B37324B4DD29002F6A9B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C89B37224B4DD29002F6A9B /* HomeViewController.swift */; };
+		1CC0A74A24DD7B2400EBDB94 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC0A74924DD7B2400EBDB94 /* ViewController1.swift */; };
 		5C683F3721EF234400E54958 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C683F3621EF234400E54958 /* AppDelegate.swift */; };
 		5C683F3921EF234400E54958 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C683F3821EF234400E54958 /* ViewController.swift */; };
 		5C683F3C21EF234400E54958 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C683F3A21EF234400E54958 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		1C3F900024BD7D4D008758F0 /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuControllerSwift.h; sourceTree = "<group>"; };
 		1C3F900124BD7D4D008758F0 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		1C89B37224B4DD29002F6A9B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1CC0A74924DD7B2400EBDB94 /* ViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController1.swift; path = Sample/ViewController1.swift; sourceTree = SOURCE_ROOT; };
 		2847EFF305829D9827173811 /* Pods-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sample/Pods-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		59F08DB07C634D0F1086AAAB /* Pods-SampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C683F3321EF234400E54958 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -262,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				5C683F3821EF234400E54958 /* ViewController.swift */,
+				1CC0A74924DD7B2400EBDB94 /* ViewController1.swift */,
 				1C89B37224B4DD29002F6A9B /* HomeViewController.swift */,
 			);
 			path = Controller;
@@ -487,6 +490,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CC0A74A24DD7B2400EBDB94 /* ViewController1.swift in Sources */,
 				BB2384302208B944003D4762 /* PinterestLayout.swift in Sources */,
 				1C3F900224BD7D4D008758F0 /* SlideMenuController.swift in Sources */,
 				5C683F6F21EF475500E54958 /* ApiClient.swift in Sources */,
